@@ -20,8 +20,14 @@ body {
 }
 
 main{
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding: 0 10rem;
+}
+
+.container {
+  padding: 1.6rem 3.2rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
 }
 
 ul {
@@ -57,25 +63,42 @@ header .list{
 
 .socials {
   display: flex;
-  width: 4rem;
+  width: 7rem;
   position: fixed;
   bottom: 0;
-  z-index: 10;
   left: 2rem;
   right: auto;
+}
+
+.socials ul{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.socials ul::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 7rem;
+  margin: 0px auto;
+  background-color: bisque;
 }
 
 .socials a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px;
-  padding: 0px;
   list-style: none;
+}
+
+.socials a img {
+  width: 3rem;
 }
 
 .email{
   display: flex;
+  flex-direction: column;
   width: 4rem;
   position: fixed;
   bottom: 0;
@@ -92,6 +115,17 @@ header .list{
   writing-mode: vertical-rl;
   margin: 20px auto;
   padding: 10px;
+  color: #4cbaef;
+  font-size: 1.4rem;
+}
+
+.email::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 7rem;
+  margin: 0px auto;
+  background-color: bisque;
 }
 
 .title{
@@ -99,7 +133,7 @@ header .list{
 }
 
 #about{
-  padding: 10rem 0;
+  padding: 10rem 0 20rem;
 }
 
 .about-inner{
@@ -107,6 +141,7 @@ header .list{
   gap: 5rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .about-inner .about-content .title,
@@ -142,17 +177,20 @@ header .list{
   object-fit: cover;
 }
 
-#work{
-  margin-left: 23.5rem;
+.work-inner{
+  padding: 10rem 0 20rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8rem;
 }
-
-
 
 .projects{
   display: flex;
-  gap: 5rem;
+  gap: 6rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .projects .item {
@@ -161,6 +199,7 @@ header .list{
   flex-direction: column;
   border-radius: .8rem;
   overflow: hidden;
+  background-color: #192d4b;
 }
 
 .projects .item img {
@@ -169,5 +208,68 @@ header .list{
   object-fit: cover;
 }
 
+.projects .details {
+  padding: 2rem;
+}
 
+.projects .item h2{
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
 
+.projects .item p{
+ font-size: 1.3rem;
+}
+
+.projects .item .details .tags{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.projects .item .details .tags span{
+  padding: .6rem;
+  background-color: #313f54;
+  border-radius: .4rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #4cbaef;
+}
+
+.contact-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0 20rem;
+}
+
+.contact-content h1 {
+  font-size: 6rem;
+}
+
+.contact-content .links {
+  display: flex;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+.contact-content a {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-content a img{
+  width: 30px;
+  margin-right: 0.5rem;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 1.4rem;
+  color: #4cbaef;
+}
